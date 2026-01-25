@@ -1,0 +1,190 @@
+/* Hero section with background image */
+        .hero-section {
+            background: url('images/hero-bg.jpg')
+                        no-repeat center center/cover;
+            min-height: 100vh;
+            color: white;
+        }
+
+/* Overlay (optional – improves text readability) */
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.55);
+            min-height: 100vh;
+        }
+
+ /* Navbar transparency */
+        .navbar {
+            background: transparent;
+        }
+/* Buttons spacing on small screens */
+        @media (max-width: 768px) {
+            .hero-buttons a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+.feature-card {
+    background: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    background: #e6f7ee; /* light green */
+    transform: translateY(-5px);
+}
+.free{
+    background: #e6f7ee;
+}
+.info-box {
+    background-color: #1f1f1f7e; /* light black */
+}
+.hover-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-card:hover {
+    background-color: #e6f7ee; /* light green */
+    transform: translateY(-6px);
+}
+
+
+.image-card {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    color: #fff;
+    background: rgba(0,0,0,0.55);
+    padding: 10px 14px;
+    border-radius: 6px;
+}
+
+.top-left {
+    top: 15px;
+    left: 15px;
+}
+
+.bottom-left {
+    bottom: 15px;
+    left: 15px;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+}
+
+.plan-badge {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #198754;
+    color: #fff;
+    padding: 4px 14px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.middle-card {
+    background:#3D493A; 
+    border-radius: 14px;
+}
+
+.image-dark-bg {
+    background: #2a2a2a;
+    padding: 30px 0;
+    border-radius: 12px;
+}
+
+.middle-card:hover {
+    transform: translateY(-6px);
+}
+.small-circle-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Marquee */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: scroll-left 15s linear infinite;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Light green active accordion */
+.accordion-button:not(.collapsed) {
+    background-color: #d9f5e5;
+    color: #000;
+}
+
+/* Remove default bootstrap focus shadow */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Image badge */
+.image-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #ffffff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.footer-section h6 {
+    font-weight: 600;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footer-section a:hover {
+    color: #198754;
+}
+
+.social-link {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color:#AEA17E;
+}
+
