@@ -28,17 +28,78 @@
     border-radius: 10px;
     transition: all 0.3s ease;
     cursor: pointer;
+    height: 350px;
+    width:250px;
+}
+.feature-card .card-title{
+     font-size: 20px;
+     margin-bottom: 12px;  
+}
+.feature-card .card-text {
+    margin-bottom: 24px;  
 }
 
-.feature-card:hover {
-    background: #e6f7ee; /* light green */
-    transform: translateY(-5px);
+/* spacing between icon row and text */
+.feature-card .d-flex {
+    margin-bottom: 20px;
 }
+.feature-card:hover {
+    background: #3D493A; /* light green */
+    transform: translateY(-5px);
+    color:white;
+}
+.arrow-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #3D493A;
+    
+    border-radius: 50%;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: #ffffff; /* arrow color */
+    
+    transition: all 0.3s ease;
+}
+
+
+.feature-card:hover .arrow-circle {
+    background-color: #AEA17E;
+    transform: rotate(45deg);
+}
+
+.section-title {
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.section-title .highlight-text {
+    display: block;          /* moves to next line */
+    color: #AEA17E;          /* light brown */
+}
+.right-space{
+    margin-right: 10px;
+}
+.col-auto{
+    margin-bottom: 10px;
+}
+.font-weight-600{
+    font-size:20px;
+    color:#576154;
+    margin-left: 15px;
+}
+.read-more{
+    text-decoration: none;
+    color:#576154
+}
+
 .free{
     background: #e6f7ee;
 }
 .info-box {
-    background-color: #1f1f1f7e; /* light black */
+    background-color: #1E1E1E; /* light black */
 }
 .hover-card {
     background-color: #ffffff;
@@ -61,18 +122,25 @@
 .object-fit-cover {
     object-fit: cover;
 }
-
+.new-line{
+    display:block;
+}
+.light-brown{
+    color:#d2b48c
+}
+.text-white{
+    color: white;
+}
 .overlay {
     position: absolute;
-    color: #fff;
-    background: rgba(0,0,0,0.55);
-    padding: 10px 14px;
+    color:black;
+    padding: 5px 7px;
     border-radius: 6px;
 }
 
 .top-left {
-    top: 15px;
-    left: 15px;
+    top: 5px;
+    left: 5px;
 }
 
 .bottom-left {
@@ -89,14 +157,40 @@
 .pricing-card:hover {
     transform: translateY(-6px);
 }
+.pricing-features {
+  list-style-position:inside; 
+  padding: 0;
+  margin: 0 auto 20px;
+  text-align: left; /* text centered, column stays vertical */
+}
 
+.pricing-features li {
+  margin-bottom: 10px;
+}
+.colour-brown{
+    background-color: #d2b48c;
+    z-index:1;
+}
+.center {
+  /* display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; */
+  display: grid;
+  place-items: center;
+  /* height: 50px; */
+  margin-bottom: 2px; 
+  text-align: left; 
+}
 .plan-badge {
     position: absolute;
-    bottom: -12px;
+    bottom: -25px;
     left: 50%;
+    width:40%;
+    text-align: center;
     transform: translateX(-50%);
-    background: #198754;
-    color: #fff;
+    background:white;
+    color:black;
     padding: 4px 14px;
     font-size: 14px;
     border-radius: 20px;
@@ -105,6 +199,7 @@
 .middle-card {
     background:#3D493A; 
     border-radius: 14px;
+    z-index:-1;
 }
 
 .image-dark-bg {
@@ -166,18 +261,22 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
+.footer-section{
+    background-color: #3D493A;
 
-.footer-section h6 {
+}
+.footer-section h3 {
     font-weight: 600;
 }
 
 .footer-section a {
     text-decoration: none;
-    color: #6c757d;
+    color: white;
+    margin-bottom: 5px;
 }
 
 .footer-section a:hover {
-    color: #198754;
+    color:#d2b48c;
 }
 
 .social-link {
@@ -188,3 +287,258 @@
     background-color:#AEA17E;
 }
 
+/* SVG + text spacing */
+.icon-inline {
+    display: inline-block;
+    margin-right: 8px; /* space between svg and text */
+    margin-left: 10px;
+    flex-shrink: 0;
+    color:white;
+}
+
+/* Text container */
+.text-block {
+    display: inline-block;
+}
+
+/* Replacement for <br> using CSS */
+.title-line {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.desc-line {
+    display: block;
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: 0.9;
+}
+
+object-fit-cover{
+    object-fit: cover;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #8b5a2b; /* brown */
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+button,
+.btn {
+    background-color:#3D493A;
+    color:white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button active (clicked) */
+button.active-btn,
+.btn.active-btn {
+    background-color: #d2b48c !important; /* light brown */
+    /* color: #000 !important; */
+}
+
+.scroll-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-text,
+.scroll-image {
+    will-change: transform, opacity;
+    transition: transform 0.1s linear;
+}
+.scroll-section h1,
+.scroll-section h2,
+.scroll-section h3,
+.scroll-section h4,
+.scroll-section h5,
+.scroll-section h6,
+.scroll-section p,
+.scroll-section li,
+.scroll-section img {
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    will-change: transform, opacity;
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #AEA17E 50%, #3D493A 50%); /* Light brown to default */
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-out; /* Smooth transition for everything */
+}
+
+/* Color change from left to right */
+.btn:hover {
+  background-position: left bottom;
+}
+.btn-reverse{
+    padding: 12px 24px;
+    background: linear-gradient(to right,#3D493A 50%, #AEA17E 50%);
+    background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.4s ease;
+}
+.btn-reverse:hover {
+  background-position: left bottom;
+}
+/* Target the SVG icon inside the span */
+.btn span svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(2px, -2px); /* Initial "top-right" position */
+}
+
+/* Shift arrow to "middle-right" on hover */
+.btn:hover span svg {
+  transform: rotate(45deg);
+}
+
+
+/* Initial hidden states */
+.hidden-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease-out; }
+.hidden-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease-out; }
+.hidden-top { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+.hidden-bottom { opacity: 0; transform: translateY(-50px); transition: all 1s ease-out; }
+
+/* The class JS will add when you scroll to them */
+.show { opacity: 1; transform: translate(0, 0); }
+
+.about-img-wrap {
+    position: relative;
+    padding-right: 70px;
+}
+
+/* Vertical text */
+.about-vertical-text {
+    position: absolute;
+    top: 50%;
+    right: -200px; /* space between image and text */
+    transform: translateY(-50%) rotate(-90deg);
+    /* transform-origin: center; */
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #5a4a3b; /* brown shade */
+
+    opacity: 0.25; /* less visible by default */
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover effect */
+.about-img-wrap:hover .about-vertical-text {
+    opacity: 1;
+}
+.left-space{
+    padding-left: 80px;
+}
+
+.circle-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 250px; /* control spacing here */
+  margin-bottom:30px;
+
+}
+
+.below-space{
+    margin-bottom: 15px;;
+}
+/* Wrapper to center content */
+.subscribe-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Email + image in one line */
+.subscribe-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Email box */
+.email-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 8px 0;
+  color: #fff;
+  outline: none;
+  width: 220px;
+}
+
+/* Placeholder color */
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Image icon */
+/* Circle background */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #AEA17E; /* light brown */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.icon-square{
+    width: 40px;
+  height: 40px;
+  background-color:#3D493A; /* light brown */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+/* Icon inside circle */
+.send-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effects */
+.icon-circle:hover {
+  background-color:#3D493A; /* light green */
+}
+
+/* Rotate arrow 45deg to right */
+.icon-circle:hover .send-icon {
+  transform: rotate(45deg);
+}
+.icon-square:hover {
+  background-color: #8FA98B; /* light green */
+}
+
+.icon-square:hover .send-icon {
+  transform: rotate(45deg);
+}
+/* Full-width horizontal line */
+.footer-line {
+  margin-top: 20px;
+  border: none;
+  height: 1px;
+  background-color: #ffffff;
+  width: 100%;
+}
