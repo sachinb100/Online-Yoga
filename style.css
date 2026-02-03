@@ -1,10 +1,31 @@
+body, html {
+  height: 100%;
+}
+
 /* Hero section with background image */
         .hero-section {
-            background: url('images/hero-bg.jpg')
+            /* background: url('images/hero-bg.jpg')
                         no-repeat center center/cover;
             min-height: 100vh;
+            color: white; */
+            
+            background-image: url('images/hero-bg.jpg');
             color: white;
+
+  /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+    @media only screen and (max-device-width: 1366px) {
+        .hero-section {
+    background-attachment: scroll;
+  }
+}
 
 /* Overlay (optional – improves text readability) */
         .hero-overlay {
@@ -280,7 +301,7 @@
 }
 
 .social-link {
-    padding: 6px 10px;
+    padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 50%;
     font-size: 12px;
@@ -457,7 +478,10 @@ button.active-btn,
 }
 
 .below-space{
-    margin-bottom: 15px;;
+    /* margin-bottom: 50px;; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 /* Wrapper to center content */
 .subscribe-wrapper {
@@ -541,4 +565,12 @@ button.active-btn,
   height: 1px;
   background-color: #ffffff;
   width: 100%;
+}
+
+.shift-right{
+    float:right;
+}
+
+.rightmargin{
+    margin-right: 80px;;
 }
